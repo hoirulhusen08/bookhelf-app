@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf App</title>
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container">
+          <div class="brand">
+            <a href="index.html">Books-helf App</a>
+          </div>
+          <div class="nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#" onclick="alertPopUp()">About</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <div class="container"></div>
+      </div>
+    </header>
+
+    <!-- Form Search Data -->
+    <section class="search">
+      <input type="text" id="search" placeholder="Live search here..." />
+    </section>
+
+    <!-- Main Content -->
+    <main class="content">
+      <section class="form">
+        <!-- Message Success -->
+        <div class="submit-success d-none" id="boxMessage">
+          <span id="closeMessage">X</span>
+        </div>
+        <h2 class="title-form">Form Input Data</h2>
+        <form id="formBook">
+          <div class="form-input">
+            <label for="title">Title</label>
+            <input type="text" id="title" placeholder="Title book..." required />
+          </div>
+          <div class="form-input">
+            <label for="author">Author</label>
+            <input type="text" id="author" placeholder="Author..." required />
+          </div>
+          <div class="form-input">
+            <label for="image">Image URL</label>
+            <input type="url" id="image" placeholder="Input URL Image..." required />
+          </div>
+          <div class="form-input">
+            <label for="date">Date Release</label>
+            <input type="date" id="date" placeholder="Date release..." required />
+          </div>
+          <button type="submit" id="btn-book" class="btn">Send Data</button>
+        </form>
+      </section>
+
+      <section class="side">
+        <aside>
+          <div class="list-data-unread">
+            <!-- Message Success -->
+            <div class="delete-success d-none" id="boxMessageDelete">
+              <span id="closeMessageDelete">X</span>
+            </div>
+            <h2>Unread Books</h2>
+            <div id="unread">
+              <p class="no-data">There is no data here yet...</p>
+              <!-- Isi data buku disini -->
+            </div>
+          </div>
+          <div class="list-data-read">
+            <h2>Read Books</h2>
+            <div id="read">
+              <p class="no-data">There is no data here yet...</p>
+              <!-- Isi data buku disini -->
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <!-- Modal PopUp -->
+    <section id="modalPopUp" class="modal-popup">
+      <div class="close" onclick="closePopUp()">X</div>
+      <div class="content">
+        <img src="assets/img/profile.png" alt="Image" />
+        <p class="name">M. Khoirul Husen</p>
+        <p class="title">Student | Content Creator | Freelancer</p>
+        <p class="desc">
+          Hallo semua, perkenalkan saya M. Khoirul Husen, bisa dipanggil Irul, saya seorang Mahasiswa, suka akan dunia Teknologi dan selalu belajar tentang itu, kegiatan saya selain Kuliah yaitu nge-Freelance jasa-jasa Komputer, dan diluar
+          itu juga saya suka membuat Konten yang bermanfaat.
+        </p>
+      </div>
+      <div class="footer">
+        <a href="https://instagram.com/hoirulhusen08" target="_blank">Instagram</a>
+        <a href="https://github.com/hoirulhusen08" target="_blank">GitHub</a>
+        <a href="https://twitter.com/hoirulhusen08" target="_blank">Twitter</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Copyright &copy; 2022, by Khoirul Husen | All Right Reserved</p>
+    </footer>
+
+    <!-- My Script JS -->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
